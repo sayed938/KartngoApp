@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btImported.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setClickedButton(binding.btImported, binding.btBestOffers, binding.btFattyCheese, binding.btFattyCheese);
+                setClickedButton(binding.btImported, binding.btBestOffers, binding.btCheese, binding.btFattyCheese);
 
             }
         });
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btCheese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setClickedButton(binding.btCheese, binding.btImported, binding.btFattyCheese, binding.btFattyCheese);
+                setClickedButton(binding.btCheese, binding.btImported, binding.btBestOffers, binding.btFattyCheese);
             }
         });
         binding.btBestOffers.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceAsColor")
     void setClickedButton(Button b1, Button b2, Button b3, Button b4) {
         b1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_24, 0, 0, 0);
+        b1.setTextColor(ContextCompat.getColor(this, R.color.btn_text_color_clicked));
         b1.setSelected(true);
         setUnClickedButton(b2);
         setUnClickedButton(b3);
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceAsColor")
     void setUnClickedButton(Button b) {
         b.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+        b.setTextColor(ContextCompat.getColor(this, R.color.btn_text_color));
         b.setSelected(false);
     }
 

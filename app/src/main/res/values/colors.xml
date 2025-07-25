@@ -4,8 +4,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="btn_text_color">#EE143F57</color>
-    <color name="btn_color_pressed">#EE8DABC3</color>
-    <color name="btn_color">#E2E8F0</color>
+    <color name="btn_text_color_clicked">#EE39729B</color>
+
+    <color name="btn_color_pressed">#EEBDC9D3</color>
+    <color name="btn_color">#EBEFF2</color>
 
 
 </resources>
