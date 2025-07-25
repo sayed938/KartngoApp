@@ -30,8 +30,8 @@
             android:layout_height="wrap_content"
             android:text="Double Whopper"
             android:textStyle="bold"
-            android:textColor="#1E293B"
-            android:gravity="center"
+            android:textColor="#3C537E"
+            android:gravity="start"
             android:paddingTop="4dp"
             android:maxLines="1"
             android:ellipsize="end" />
@@ -39,22 +39,37 @@
         <!-- Price and Quantity Row -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="8dp">
 
             <!-- Price -->
+
+
             <TextView
                 android:id="@+id/productPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="29.57 SAR"
-                android:textColor="#334155"
-                android:textSize="14sp"
+                android:textColor="#556B87"
+                android:layout_gravity="center"
+                android:textSize="16sp"
                 android:layout_marginEnd="8dp" />
 
             <!-- Minus Button -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                android:backgroundTint="@color/btn_color"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
             <TextView
                 android:id="@+id/minusButton"
                 android:layout_width="32dp"
@@ -62,8 +77,7 @@
                 android:text="-"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:background="@drawable/bt_back"
-                android:textColor="#1E293B" />
+                android:textColor="#556B87" />
 
             <!-- Quantity Text -->
             <TextView
@@ -73,7 +87,7 @@
                 android:gravity="center"
                 android:text="0"
                 android:textColor="#1E293B"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <!-- Plus Button -->
             <TextView
@@ -83,8 +97,9 @@
                 android:text="+"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:background="@drawable/bt_back"
-                android:textColor="#1E293B" />
+                android:textColor="#556B87" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </LinearLayout>
 

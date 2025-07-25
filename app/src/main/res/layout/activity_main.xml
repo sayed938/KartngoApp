@@ -60,45 +60,44 @@
                 android:id="@+id/bt_best_offers"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
-                android:layout_marginStart="12dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/btn_custom"
                 android:text="أفضل العروض"
                 android:textColor="@color/btn_text_color"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/bt_imported"
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/btn_custom"
                 android:text="مستورد"
                 android:textColor="@color/btn_text_color"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/bt_fatty_cheese"
-                android:layout_width="100dp"
+                android:layout_width="105dp"
                 android:layout_height="35dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/btn_custom"
                 android:text="اجبان قابلة للدهن"
                 android:textColor="@color/btn_text_color"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/bt_cheese"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/btn_custom"
                 android:text="اجبان"
                 android:textColor="@color/btn_text_color"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
             <!-- Add more filter buttons as needed -->
 

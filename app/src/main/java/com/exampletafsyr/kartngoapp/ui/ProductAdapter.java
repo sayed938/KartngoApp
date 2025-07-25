@@ -24,7 +24,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     }
 
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView name, price,btnPlus,btnMinus,quantity;
+        TextView name, price, btnPlus, btnMinus, quantity;
         ImageView image;
 
         public ProductViewHolder(View itemView) {
@@ -33,8 +33,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             price = itemView.findViewById(R.id.productPrice);
             image = itemView.findViewById(R.id.productImage);
             btnPlus = itemView.findViewById(R.id.plusButton);
-            btnMinus=itemView.findViewById(R.id.minusButton);
-            quantity=itemView.findViewById(R.id.quantityText);
+            btnMinus = itemView.findViewById(R.id.minusButton);
+            quantity = itemView.findViewById(R.id.quantityText);
 
         }
     }
@@ -50,7 +50,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.name.setText(product.getProductName());
-        holder.price.setText(product.getProductPrice() + " SAR");
+        if ((product.getProductPrice() + " SAR").length() > 6) {
+            holder.price.setText(product.getProductPrice() + " S..");
+        } else holder.price.setText(product.getProductPrice() + " SAR");
+
         holder.image.setImageResource(product.getImage());
         holder.itemView.setOnClickListener(v -> {
             Toast.makeText(v.getContext(), "Selected: " + product.getProductName(), Toast.LENGTH_SHORT).show();

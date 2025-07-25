@@ -17,6 +17,7 @@ public class ProductViewModel extends ViewModel {
     private final ProductRepo productRepo;
 
     public ProductViewModel() {
+        getProducts();
         productRepo = new ProductRepo();
         loadProducts();
     }

@@ -12,13 +12,20 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.exampletafsyr.kartngoapp.R;
 import com.exampletafsyr.kartngoapp.databinding.ActivityMainBinding;
+import com.exampletafsyr.kartngoapp.model.Product;
+import com.exampletafsyr.kartngoapp.viewmodel.ProductViewModel;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    private ProductViewModel productViewModel;
+    private List<Product> productList;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -29,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         binding.productRecyclerView.setLayoutManager(gridLayoutManager);
         setClickedButton(binding.btBestOffers, binding.btImported, binding.btFattyCheese, binding.btFattyCheese);
+        productViewModel = new ViewModelProvider(this).get(ProductViewModel.class);
+
+        productViewModel.getProducts().observe(this, products -> {
+            if (products != null) {
+                binding.productRecyclerView.setAdapter(new ProductAdapter(products));
+            }
+        });
         binding.btImported.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
