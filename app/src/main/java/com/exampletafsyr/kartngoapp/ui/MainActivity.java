@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.exampletafsyr.kartngoapp.R;
 import com.exampletafsyr.kartngoapp.databinding.ActivityMainBinding;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        binding.productRecyclerView.setLayoutManager(gridLayoutManager);
         setClickedButton(binding.btBestOffers, binding.btImported, binding.btFattyCheese, binding.btFattyCheese);
         binding.btImported.setOnClickListener(new View.OnClickListener() {
             @Override
