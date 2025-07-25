@@ -6,7 +6,7 @@ The app allows users to browse items, increase/decrease quantity, and view total
 ## Final UI 
 | My App (Emulator)                   | Provided Design                  |
 |-------------------------------------|----------------------------------|
-| ![My App](screenshot/My_Design.png) | ![Design](screenshot/Design.png) |
+| ![My App](screenshot/My_Design.PNG) | ![Design](screenshot/Design.PNG) |
 
 ---
 
