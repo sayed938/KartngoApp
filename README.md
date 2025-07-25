@@ -16,7 +16,7 @@ The app allows users to browse items, increase/decrease quantity, and view total
 **Used for:** `model/Product.java`  
 **Commit:** `11d8799`
  
-### Prompt 2: Generate ProductViewModel with LiveData
+### Prompt 2: create java viewmodel class named ProductViewModel use LiveData to expose a list of product call a method from ProductRepo to get Product Data
 ### Response 2: complete Java ViewModel class named ProductViewModel that uses LiveData to expose a list of Product objects and calls a method from ProductRepo to get the product data.
 **Used for:** `viewmodel/ProductViewModel.java`  
 **Commit:** `260a614`
