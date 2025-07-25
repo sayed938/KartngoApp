@@ -1,8 +1,10 @@
 package com.exampletafsyr.kartngoapp.data;
 
 import com.exampletafsyr.kartngoapp.R;
+import com.exampletafsyr.kartngoapp.model.Product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductRepo {
 
